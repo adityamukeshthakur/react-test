@@ -1,5 +1,68 @@
+  
+
 .App {
+  width: 100%;
+}
+
+.Header {
   text-align: center;
+  color: #fff;
+  margin: 0;
+  padding: 25px;
+  background-color: #303F4C;
+}
+.Body {
+  width: 100%;
+  position: relative;
+}
+.leftBlock {
+  position: absolute;
+  width: 75%;
+  height: 1000px;
+  display: inline;
+}
+.rightBlock {
+  position: absolute;
+  right: 0;
+  width: 25%;
+  height: 1000px;
+  border-left: 1px solid #ccc;
+  display: inline;
+}
+
+.cards {  
+  height: 100px;
+  width: 90% ;
+  margin: 1%; 
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+.imgCircle {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #eee;
+  display: inline-block;
+}
+.badge {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background-color: #303F4C;
+  display: inline-block;
+  margin-top: -22px;
+  margin-left: 15px;
+}
+.count {
+  color: #fff;
+  margin: 0;
+}
+.button {
+  background-color: orange;
+  border: 1px solid #ccc;
+  padding: 3px;
+  cursor: pointer;
+  width: 50px;
 }
 
 .App-logo {
