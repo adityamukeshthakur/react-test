@@ -30,7 +30,7 @@ class App extends Component {
     // console.log(this.state.text);
     return (
       <div className="App">
-        <h1 className="Header">React Proj</h1>
+        <h1 className="Header">React Project</h1>
         <div className="Body">
           <div className="leftBlock" ref="targetDiv" onClick = {(e) => this.divClick(e)} >
             <Input ref = "input" locationX = {this.state.locationX} locationY = {this.state.locationY} />
@@ -40,20 +40,22 @@ class App extends Component {
             this.props.comments.map((comment, index) => {
               return(
                 <div className="cards" key={index} >
-                  <div className="imgCircle"></div>
-                  <div className="badge">
-                    <div className="count">{comment.badgeNo}</div>
-                    <div>
+                  <div>
+                    <div className="imgCircle"></div>
+                    <div className="badge">
+                      <div className="count">{comment.badgeNo}</div>
+                    </div>
+                    <div className="review">
                       {comment.text}
                     </div>
                   </div>
-                  <div>
+                  <div className="rate">
                     Rate:
                   </div>
-                  <div>
+                  <div className="verdict">
                     Verdict:
                   </div>
-                  <div className="button">Reply</div>
+                  <button type="button" className="button">Reply</button>
                 </div>
               )
             })
