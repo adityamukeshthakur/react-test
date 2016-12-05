@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import VideoPlayer from './components/video-player';
 // import logo from './logo.svg';
 import './App.css';
 import Input from './components/input';
@@ -35,6 +36,7 @@ class App extends Component {
           <div className="leftBlock" ref="targetDiv" onClick = {(e) => this.divClick(e)} >
             <Input ref = "input" locationX = {this.state.locationX} locationY = {this.state.locationY} />
           </div>
+          <VideoPlayer />
           <div className="rightBlock">
           {
             this.props.comments.map((comment, index) => {
