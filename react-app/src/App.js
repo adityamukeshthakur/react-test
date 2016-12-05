@@ -35,8 +35,10 @@ class App extends Component {
         <div className="Body">
           <div className="leftBlock" ref="targetDiv" onClick = {(e) => this.divClick(e)} >
             <Input ref = "input" locationX = {this.state.locationX} locationY = {this.state.locationY} />
+            <div className="videoBlock">
+              <VideoPlayer />
+            </div>
           </div>
-          <VideoPlayer />
           <div className="rightBlock">
           {
             this.props.comments.map((comment, index) => {

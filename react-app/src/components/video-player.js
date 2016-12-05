@@ -24,9 +24,8 @@ class VideoPlayer extends Component {
         return (
             <ReactPlayer
                ref={player => { this.player = player }}
-               width={480}
-               height={270}
-               style = {{left: 80}}
+               width={360}
+               height={210}
                url='https://www.youtube.com/watch?v=ysz5S6PUM-U'
                playing={playing}
                volume={volume}
