@@ -7,20 +7,26 @@
 import * as types from './actionTypes';
 
 const initialState = {
-  comments: []
+  comments: [],
+  badgeNumber: 0
 };
 
 export default function reduce(state = initialState, action = {}) {
   // console.log(state, '%%%%%%%%%reducer:App%%%%%%%%');
   switch (action.type) {
 
-    case types.LOGIN:  {
-      console.log('######reducer#####');
-      // console.log(action.token, '*******auth.reducer*********');
-      // state.token = action.data.jwtAccessToken;
-      // state.user = action.data.user;
+    case types.ADD_COMMENT:  {
+      // console.log('######reducer#####');
+      // console.log(action.data, '*******action.data*********');
+      state.badgeNumber++;
+      // console.log(state.badgeNumber, '^^^^^^^state.badgeNumber^^^^^^^^^');
+      let data = {
+        text: action.data,
+        badgeNo: state.badgeNumber
+      };
+
       return {
-        ...state,
+        ...state, comments : [ ...state.comments, data]
       };
     }
     default:

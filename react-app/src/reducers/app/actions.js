@@ -10,28 +10,10 @@ import * as types from './actionTypes';
 // import auth from '../../services/auth';
 // import cloud from '../../services/cloud';
 
-export function actions() {
-  console.log('######actions######');
-  // return function (dispatch, getState) {
-  //   dispatch({ type: types.TOGGLE_IS_LOADING_USER});
-  //   return auth.signup(data)
-  //   .then((response) => response.json())
-  //     .then((responseJson) => {
-  //       console.log(responseJson, ' &&&&&&&&responseJson:auth.js&&&&&&&&');
-  //       // filter this data to suit corresponding view
-  //       if (responseJson.success) {
-  //         console.log('suuccess');
-  //         // const data = responseJson.data;
-  //         // dispatch({ type: types.SIGNUP, data });
-  //         // dispatch({ type: types.TOGGLE_IS_LOADING_USER});
-  //       } else {
-  //         console.log('error in creating user.');
-  //       }
-  //       console.log('signup finished');
-  //     })
-  //     .catch((error) => {
-  //       console.log(error, '%%%%%%%%%%%error%%%%%%%%%');
-  //     })
-  //   .catch((err) => console.log(err, '$$$$$$$$$err$$$$$$$'));
-  // };
+export function addComment(data) {
+  // console.log('action');
+  return {
+    type: types.ADD_COMMENT,
+    data: data
+  }
 }
