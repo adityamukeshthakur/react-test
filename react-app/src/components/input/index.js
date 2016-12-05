@@ -38,17 +38,17 @@ class Input extends Component {
 
   render() {
     var inputBox = {
-      display: this.props.locationX ? 'block' : 'none',
-      position: 'absolute',
-      left: this.props.locationX ? this.props.locationX + 'px' : 0,
-      top: this.props.locationY ? this.props.locationY - 100 + 'px': 0
-    };
-    var button = {
-      display: this.props.locationX ? 'block' : 'none',
-      position: 'absolute',
-      left: this.props.locationX ? this.props.locationX + 'px' : 0,
-      top: this.props.locationY ? this.props.locationY - 100 + 'px': 0
-    };
+              display: this.props.locationX ? 'block' : 'none',
+              position: 'absolute',
+              left: this.props.locationX ? this.props.locationX + 'px' : 0,
+              top: this.props.locationY ? this.props.locationY - 100 + 'px': 0
+          };
+          var button = {
+                    display: this.props.locationX ? 'block' : 'none',
+                    position: 'absolute',
+                    left: this.props.locationX ? this.props.locationX + 130 + 'px' : 0,
+                    top: this.props.locationY ? this.props.locationY - 100 + 'px': 0
+                };
     return(
       <div>
         <input style={inputBox} type="text" onChange={this.update.bind(this)}/>

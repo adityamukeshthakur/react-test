@@ -18,53 +18,74 @@
 .leftBlock {
   position: absolute;
   width: 75%;
-  height: 1000px;
+  height: 600px;
   display: inline;
 }
 .rightBlock {
   position: absolute;
   right: 0;
   width: 25%;
-  height: 1000px;
+  height: 600px;
+  overflow: scroll;
   border-left: 1px solid #ccc;
   display: inline;
+  background-color: #FCFCFC;
 }
 
 .cards {
-  height: 100px;
   width: 90% ;
   margin: 1%;
   border: 1px solid #ccc;
+  border-radius: 3px;
   padding: 10px;
+  background-color: #fff;
 }
 .imgCircle {
-  height: 30px;
-  width: 30px;
+  height: 40px;
+  width: 40px;
   border-radius: 50%;
   background-color: #eee;
   display: inline-block;
+  vertical-align: middle;
 }
 .badge {
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   border-radius: 50%;
   background-color: #303F4C;
   display: inline-block;
-  margin-top: -22px;
   margin-left: 15px;
 }
 .count {
-  color: #fff;
-  margin: 0;
+    color: #fff;
+    padding: 0px;
+    margin: 6px 9px;
+    font-size: 12px;
+}
+.review {
+  display: inline-block;
+  margin-left: 10px;
+  word-break: break-all;
+}
+.rate {
+  margin-top: 15px;
+  font-size: 15px;
+}
+.verdict {
+  margin-top: 5px;
+  font-size: 15px;
 }
 .button {
-  background-color: orange;
-  border: 1px solid #ccc;
-  padding: 3px;
-  cursor: pointer;
-  width: 50px;
+    background-color: #303F4C;
+    cursor: pointer;
+    margin-top: 10px;
+    color: #fff;
 }
-
+.videoBlock {
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+}
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
   height: 180px;
