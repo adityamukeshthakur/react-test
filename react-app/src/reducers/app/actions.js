@@ -17,3 +17,17 @@ export function addComment(data) {
     data: data
   }
 }
+
+export function setDisplayFalse() {
+  // console.log('action');
+  return {
+    type: types.SET_DISPLAY_FALSE
+  }
+}
+
+export function setDisplayTrue() {
+  // console.log('action');
+  return {
+    type: types.SET_DISPLAY_TRUE
+  }
+}

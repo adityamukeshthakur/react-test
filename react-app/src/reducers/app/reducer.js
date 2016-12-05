@@ -8,7 +8,8 @@ import * as types from './actionTypes';
 
 const initialState = {
   comments: [],
-  badgeNumber: 0
+  badgeNumber: 0,
+  displayInput: true
 };
 
 export default function reduce(state = initialState, action = {}) {
@@ -21,7 +22,9 @@ export default function reduce(state = initialState, action = {}) {
       state.badgeNumber++;
       // console.log(state.badgeNumber, '^^^^^^^state.badgeNumber^^^^^^^^^');
       let data = {
-        text: action.data,
+        text: action.data.text,
+        locationX: action.data.locationX,
+        locationY: action.data.locationY,
         badgeNo: state.badgeNumber
       };
 
@@ -29,6 +32,23 @@ export default function reduce(state = initialState, action = {}) {
         ...state, comments : [ ...state.comments, data]
       };
     }
+
+    case types.SET_DISPLAY_FALSE:  {
+      // console.log('######reducer#####');
+
+      return {
+        ...state, displayInput: false
+      };
+    }
+
+    case types.SET_DISPLAY_TRUE:  {
+      // console.log('######reducer#####');
+
+      return {
+        ...state, displayInput: true
+      };
+    }
+
     default:
       return state;
   }
